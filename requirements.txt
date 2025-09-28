@@ -1,0 +1,4 @@
+flask
+python-pptx
+pdfminer.six
+gunicorn

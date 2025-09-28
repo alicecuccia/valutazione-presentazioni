@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: valutazione-presentazioni
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app_valutazione_upload:app --workers 2 --threads 4 --timeout 60
+    envVars:
+      - key: APP_SECRET_KEY
+        generateValue: true
